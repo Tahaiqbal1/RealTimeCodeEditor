@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <div>
+        {/* Configure Toaster for notification management */}
         <Toaster
           position="top-right"
           reverseOrder={true}
@@ -23,7 +24,10 @@ function App() {
 
       <BrowserRouter>
         <Routes>
+          {/* Define the route for the Home page */}
           <Route element={<Home />} path="/"></Route>
+
+          {/* Dynamic route for the Editor page, which includes a Room ID */}
           <Route element={<EditorPage />} path="/editor/:RoomId"></Route>
         </Routes>
       </BrowserRouter>

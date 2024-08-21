@@ -31,6 +31,7 @@
   cursor: pointer;
   border-radius: 5px;
   background-color: #55AD9B;
+  margin-bottom: 10px;
 }
 .joinBtn {
   margin-left: auto;
@@ -66,4 +67,15 @@
 .asideInner
 {
   flex: 1;
+}
+.clientInformation
+{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.CodeMirror 
+{
+  min-height: 100vh;
 }

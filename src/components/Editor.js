@@ -8,6 +8,7 @@ import 'codemirror/lib/codemirror.css'
 
 const CodeEditor = () => {
   useEffect(() => {
+    console.log('CodeEditor mounted');
     async function init() {
       Codemirror.fromTextArea(document.getElementById("realTimeEditor"), {
         mode: {name: 'javascript', json: true},
