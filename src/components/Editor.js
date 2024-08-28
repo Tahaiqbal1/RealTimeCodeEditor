@@ -8,17 +8,21 @@ import 'codemirror-5.65.17/addon/edit/closebrackets'
 import 'codemirror-5.65.17/lib/codemirror.css'
 
 const CodeEditor = () => {
+  //use-effect for mounting code mirror 
   useEffect(() => {
-    console.log('CodeEditor mounted');
+    // Initializes the CodeMirror editor
     async function init() {
+      // Creates a CodeMirror instance from a textarea element with the ID "realTimeEditor"
       Codemirror.fromTextArea(document.getElementById("realTimeEditor"), {
-        mode: {name: 'javascript', json: true},
-        theme: 'dracula',
-        autoCloseTags: true,
-        autoCloseBrackets: true,
-        lineNumbers: true,
+        mode: {name: 'javascript', json: true}, 
+        theme: 'dracula', 
+        autoCloseTags: true, 
+        autoCloseBrackets: true, 
+        lineNumbers: true, 
       });
     }
+
+    // Calls the init function to set up the editor
     init();
   }, []);
 
